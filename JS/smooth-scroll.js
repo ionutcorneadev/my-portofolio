@@ -119,7 +119,7 @@
 		var decoded;
 		try {
 			decoded = decodeURIComponent(hash);
-		} catch(e) {
+		} catch (e) {
 			decoded = hash;
 		}
 		return decoded;
@@ -204,7 +204,7 @@
 		var hash;
 		try {
 			hash = decodeURIComponent('#' + result);
-		} catch(e) {
+		} catch (e) {
 			hash = '#' + result;
 		}
 		return hash;
@@ -274,7 +274,7 @@
 		if (clip) {
 			location = Math.min(location, getDocumentHeight() - window.innerHeight);
 		}
- 		return location;
+		return location;
 	};
 
 	/**
@@ -335,7 +335,7 @@
 			anchor.focus();
 			anchor.style.outline = 'none';
 		}
-		window.scrollTo(0 , endLocation);
+		window.scrollTo(0, endLocation);
 
 	};
 
@@ -498,7 +498,7 @@
 
 			// Check if event.target has closest() method
 			// By @totegi - https://github.com/cferdinandi/smooth-scroll/pull/401/
-			if(!('closest' in event.target))return;
+			if (!('closest' in event.target)) return;
 
 			// Check if a smooth scroll link was clicked
 			toggle = event.target.closest(selector);
@@ -537,7 +537,7 @@
 			if (!anchor) return;
 
 			// Animate scroll to anchor link
-			smoothScroll.animateScroll(anchor, null, {updateURL: false});
+			smoothScroll.animateScroll(anchor, null, { updateURL: false });
 
 		};
 
@@ -546,7 +546,7 @@
 		 */
 		var resizeThrottler = function (event) {
 			if (!eventTimeout) {
-				eventTimeout = setTimeout((function() {
+				eventTimeout = setTimeout((function () {
 					eventTimeout = null; // Reset timeout
 					headerHeight = getHeaderHeight(fixedHeader); // Get the height of a fixed header if one exists
 				}), 66);
